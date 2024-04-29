@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Blog Pribadi</title>
+    <title>Review Buku - Blog Pribadi</title>
     <style>
-        /* CSS styling goes here */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -18,31 +17,11 @@
             padding: 20px;
             text-align: center;
         }
-        main {
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-        img {
-            display: block;
-            margin: 0 auto;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            margin-bottom: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
         nav {
-            margin-top: 20px;
+            background-color: #555;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
         }
         nav a {
             color: #fff;
@@ -52,22 +31,135 @@
         nav a:hover {
             text-decoration: underline;
         }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        article {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 30%;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #000;
+        }
+        p {
+            margin-bottom: 10px;
+            color: #333; 
+        }
+        a {
+            color: #007bff; 
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: white; /* Warna teks putih */
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>About Me</h1>
-    </header>
-    <main>
-        <img src="https://nurul.bisdiglab.com/wp-content/uploads/2024/04/WhatsApp-Image-2024-04-17-at-14.24.16.jpeg" alt="Foto Nurul Hikmah">
-        <p>Hello there! Saya Nurul Hikmah, seorang mahasiswa di Universitas Negeri Makassar. Selain mengejar ilmu, saya juga pecinta novel romantis dan musik dari negeri ginseng. Perjalanan pendidikan saya membawa saya ke Bisnis Digital. Sebagai seorang MBTI INFP, saya percaya bahwa dengan gabungan minat dan keterampilan saya, saya dapat memberikan dampak positif dalam komunitas dan dunia secara luas. Mari berbagi cerita dan pengalaman bersama-sama!</p>
-    </main>
-    <footer>
+        <h1>Nurul Hikmah</h1>
+        <p style="color: white;">Welcome to my blog, tempat di mana Anda dapat menemukan berbagai ulasan menarik tentang buku, film, musik, dan banyak lagi! Temukan inspirasi baru dan nikmati pembahasan yang mendalam di sini</p>
         <nav>
             <a href="#">Home</a>
-            <a href="#">About Me</a>
+            <div class="dropdown">
+                <button onclick="toggleMenu()" class="dropbtn">Kategori</button>
+                <div class="dropdown-content" id="kategoriMenu">
+                    <a href="#">Review Buku</a>
+                    <a href="#">Review Film</a>
+                    <a href="#">My Fav</a>
+                </div>
+            </div>
+            <a href="#" class="about-me">About Me</a>
             <a href="#">Kontak</a>
         </nav>
+        
+        <script>
+        function toggleMenu() {
+            var menu = document.getElementById("kategoriMenu");
+            menu.classList.toggle("show");
+        }
+        </script>
+        
+        <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .show {
+            display: block;
+        }
+        
+        /* Styling for about link */
+        .about-link {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        </style>        
+    <main>
+        <div style="background-color: #f4f4f4; padding: 20px;">
+            <h1 style="text-align: center; color: black;">Review Buku</h1>
+            <article style="width: 30%; margin-bottom: 20px;">
+                <h2 style="font-size: 20px;">My Little Bittersweet Wife</h2>
+                <img src="https://bukune.com/wp-content/uploads/2019/10/my-little-bittersweet-wife.jpg" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+                <p><strong>Penulis:</strong> Hyori</p>
+                <p style="font-size: 14px;">Bagi Hyejin, usia delapan belas tahun adalah masa yang menyenangkan. Semuanya terasa mudah dan indah, tidak ada satu pun yang bisa menghalanginya.
+                    Hingga suatu hari,</p>
+                <a href="#">Baca Selengkapnya</a>
+            </article>
+            <article style="width: 30%; margin-bottom: 20px;">
+                <h2 style="font-size: 20px;">Asha</h2>
+                <img src="https://bukune.com/wp-content/uploads/2023/02/asha.jpg" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+                <p><strong>Penulis:</strong> Day Daisy</p>
+                <p style="font-size: 14px; color: black;">Asha, tak pernah membayangkan jika kepergiannya ke Turki, buah hasil dari beasiswa yang ia raih, justru menjadi awal bencana untuknya.</p>
+                <a href="#">Baca Selengkapnya</a>
+            </article>
+            <article style="width: 30%; margin-bottom: 20px;">
+                <h2 style="font-size: 20px;">Fake Nerd!</h2>
+                <img src="https://bukune.com/wp-content/uploads/2023/02/fake-nerdi.jpg" style="width: 100%; border-radius: 5px; margin-bottom: 10px;">
+                <p><strong>Penulis:</strong> Liya Amoura</p>
+                <p style="font-size: 14px;">Kecantikan dan popularitas adalah dua hal yang didambakan banyak perempuan, kecuali Maura. Menjadi cantik membuat Maura dikhianati dua sahabat terdekatnya, ka</p>
+            </article>
+        </div>
+    </main>    
+    <footer>
+        <p style="color: white;">&copy; 2024 Berbagai Konten Menarik - Blog Pribadi</p>
     </footer>
-</body>
-</html>
+    
